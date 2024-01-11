@@ -124,6 +124,19 @@ h3{
     background: #4c74b6;
 }
 
+.title-computer span, .title-player span{
+    color: #000;
+    text-shadow: 0 0 0;
+    font-size: 1.4em;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+.title-computer.winner, .title-player.winner{
+    color: #00f20c;
+    text-shadow: 2px 2px 2px #000;
+}
+
 @media (max-width: 950px){
     .board{
         width: 90vw;
@@ -183,3 +196,4 @@ h3{
         font-size: 1.05rem;
     }
 }
+

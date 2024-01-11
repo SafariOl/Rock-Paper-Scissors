@@ -56,6 +56,15 @@ allOptions.forEach(option => {
 
         document.querySelector('.computer-val').textContent = String(computerVal)
         document.querySelector('.player-val').textContent = String(playerVal)
+        
+        if(computerVal > playerVal){
+            document.querySelector('.title-computer').classList.add('winner')
+        }else if(playerVal > computerVal){
+            document.querySelector('.title-player').classList.add('winner')
+        }else{
+            document.querySelector('.title-computer').classList.remove('winner')
+            document.querySelector('.title-player').classList.remove('winner')
+        }
     })
 })
 
