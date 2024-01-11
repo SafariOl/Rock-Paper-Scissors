@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    background: #94ddf1;
+    font-family: 'Russo One', sans-serif;
+}
+
+button{
+    font-family: 'Russo One', sans-serif;
+}
+
+h3{
+    font-size: 2em;
+    color: #ff0040;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.wrapper{
+    padding: 20px;
+}
+
+.container{
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.results{
+    position: relative;
+    margin: 20px auto 0;
+    max-width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.option{
+    border-radius: 10px;
+    border: 4px solid #000;
+    box-shadow: 5px 5px 5px #000;
+    max-width: 230px;
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    background-color: #0b3c8b;
+    outline: none;
+    transition: all .2s ease;
+}
+
+.option:active{
+    background-color: #295bab;
+    transform: scale(0.95);
+}
+
+.option img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.computer-option, .player-option{
+    max-width: 230px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.board{
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffd000;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.reset{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: none;
+    max-width: 150px;
+    width: 100%;
+    padding: 7px 0;
+    background-color: #0f4d9e;
+    color: #fff;
+    font-size: 2rem;
+    border: 3px solid #000000;
+    box-shadow: 3px 3px 3px #000;
+    border-radius: 5px;
+    transition: all .2s ease;
+    opacity: 0;
+    height: 0;
+}
+
+.reset:hover{
+    background: #4c74b6;
+}
+
+@media (max-width: 950px){
+    .board{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 660px){
+    .computer-option, .player-option{
+        max-width: 180px;
+    }
+    .result{
+        font-size: 1.2em;
+    }
+    .results{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 550px){
+    .reset{
+        max-width: 115px;
+        font-size: 1.3rem;
+    }
+    .computer-option, .player-option{
+        max-width: 150px;
+    }
+    .option{
+        height: 24vh;
+    }
+    .results{
+        max-width: 85vw;
+    }
+}
+
+@media (max-width: 450px){
+    h1{
+        font-size: 1.5em;
+    }
+    h3{
+        font-size: 1.7em;
+    }
+    .results{
+        max-width: 95vw;
+    }
+    .reset{
+        top: 80%;
+        max-width: 145px;
+    }
+    .computer-option, .player-option{
+        max-width: 150px;
+    }
+    .computer-option, .player-option{
+        max-width: 140px;
+        margin-top: -100px;
+    }
+    .results {
+        font-size: 1.05rem;
+    }
+}
